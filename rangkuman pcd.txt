@@ -1,0 +1,169 @@
+proses computer vision =
+- image acquisition
+- preprocesing
+- segementasion
+- representation and description
+- recognition and 
+
+correlation :
+proses point processing
+
+convolution :
+harus simetris
+
+median filter :
+mengambil nilai median dari sekelilingnya
+
+template matching :
+
+blurring image :
+
+multilayer perseptron =
+input - hidden layer - output layer
+input layer = jumlah neuron menyatakan jumlah dimensi input
+hidden layer = banyaknya sesuai kondisi
+output layer = 
+
+learning rule =
+1. hebb rule : 
+2. perceptron : jaringan saraf dengan 1 lapisan
+3. delta rule
+4. backpropagation : 
+
+---------------------------
+MORFOLOGI
+proses yang dilakukan untuk memberi garis tepi
+
+Structering element = sampel yang ditempel pada gambar untuk memberi jiplakan. gitulah pokoknya
+erotion = mengikis objek gambar
+dilatasion = memperbesar objek gambar
+---------------------------
+DETEKSI TEPI
+operasi yang dilakukan untuk medeteksi garis yg membatasi dua wilayah citra homogen
+
+segmentasi citra didasarkan pada diskontinuitas dan kemiripan
+
+image strip - first derivative - second derivative
+
+- computer derivative dicari di sumbu x dan y
+- berapa thresholdnya (garis tepi)
+- 
+
+step menggunakan konsep gradien :
+- smoothing input image
+- fx
+- fy
+- cari magnitude
+- cari direction
+- cari threshold, jika magnitude > threshold mada termasuk poin
+
+3 kriteria bagus :
+- good detection
+- good localization
+- single response
+----------------------------------------------------
+BAB VII
+fourier transform
+
+- tahapan image processing :
+1. image acquizition
+2. image enhancement (tergantung orangnya, mau bikin bagus atau jelek gambarnya) 
+3. image restoration (mengambil citra ke bentuk aslinya)
+
+- fourier = mentransformasi data dari ruang waktu kedalam frekuensi domain
+- transformasi fourier =  menguraikan sinyal/gelombang dari berbagai frekuensi yg jumlahnya sama/ekuivalen dgn jumlah aslinya
+- fourier transform fokus ke 2D (image)
+- kenapa diubah ke ruang frekuensi? karena akan mendapat lebih banyak informasi dibanding di ruang spasial. juga lebih mudah dibaca
+- f(x) = A cos (kx + _theta)
+- fourier series = kumpulan seri gelombang
+
+- discreate fourier transform (DFT) = membagi fungsi kontinu kedalam diskrit (integral ke sum)
+- di fourier window nya seragam (sama), kalo wavelet window nya bisa diatur
+- teori yg bisa dipakai sampling (membagi menjadi berbagai interval) = nyquist frequency
+
+- konvolusi g = f (fungsi dasar) * h (basisnya)
+- spasial notasinya kecil, domain notasinya besar
+- properties dalam fourier = linearity, scaling (memperbesar), shifting (generate data) dll
+- smoothing/gaussian pake low pass, contrass pake high pass
+- representasi/hasil dari proses fourier di image adalah spektrum
+- fourier transform memungkinkan untuk mengurangi rentan waktu
+- filtering pada spasial lebih mudah dipahami, tapi filtering pada frequent domain lebih cepat (terutama pada yg datanya banyak)
+
+----------------------------------------------------
+WAVELET
+- kelemahan ruang spasial tidak bisa memisahkan image dan noise
+- dalam image yang dimaksud dimensi waktu adalah piksel
+- dalam ruang frekuensi informasi tentang waktu dihilangkan
+- solusi pertama : short time fourier transform (gabor transform). idenya dia menggunakan windowing. namun kelemahannya ukuran windowingnya sama. lalu gimana caranya buat ukuran window/filter yg berbeda2? disinilah muncul Wavelet
+- semakin kecil window = frekuensi tinggi
+- cara kerja wavelet memiliki gelombang pada waktu tertentu saja (limited localization)
+- terdapat fungsi skala
+- informasi yang diberikan wavelet lebih kaya dibanding fourier 
+- proses dekomposisi berpengaruh terhadap ukuran citra
+
+
+----------------------------------------------------
+IMAGE Restoration
+
+perbedaan image enhancement (IE) dengan image restoration (IR) :
+- IE proses subjek, smentara IR objek
+- IE memperbaiki untuk tujuan tertentu sementara IR untuk citra yg terkena noise
+- degradasi model : g = h*f + n
+g(x,y) = degradasi gambar
+h(x,y) = transfer function (konvolusi)
+f(x,y) = input image
+n(x,y) = additive noise
+- dua tipe degradasi model : additive noise dan image blur
+- proses image restoration :
+1. gunakan pengetahuan priori untuk degradasi
+2. pemodelan degradasi dan terapkan invers proses
+3. formulasi dan evaluasi objek sesuai dengan kriteria kebaikan
+- model noise = gaussian model, rayleigh noise, erlang noise, exponential noise, uniform noise, impulse noise
+
+- tipe filtering :
+1. mean filter = arithmetic mean filter, geometric mean filter, harmonic mean filter
+2. order statistic filter = median filter, max filter, min filter, midpoint filter
+3. adaptive filter 
+- kelemahan invers filtering :
+1. tidak cukup kuat karena tidak menghandle semua noise
+2. mudah sekali korup
+3. justru noise malah dapat memenuhi output
+- wierner filtering = ukuran yg dapat digunakan jika restorasi kita telah melakukan pekerjaan dengan baik
+
+
+----------------------------------------------------
+Hough Transform
+
+
+- HT = digunakan untuk mendeteksi garis, objek dll
+- penemu hough 1962
+- 
+
+----------------------------------------------------
+PEMAMPATAN CITRA
+
+- citra digital umumnya besar sehingga perlu pemampatan data menggunakan redundancy/duplikasi data
+- data redundant = data yg tidak mengandung informasi/mengandung informasi sebelumnya
+- teknik pada kompresi citra :
+1. information preserving = proses data asli emnjadi lebih ringkas tanpa menghilangkan informasi
+2. loosy compresion = lebih ringkas dan terdapat tingkat error yg dapat diterima
+- 3 jenis redundant :
+1. coding redundant = apabila kode simbol yg digunakan melebihi jumlah bit yg diperlukan
+2. interpixel/spatial redundant = dimana intensitas piksel dapat dipetakan dari intensitas piksel2 tetangganya. run-length coding : (g1,R1) dimana g = tingkat keabuan dan R jumlah piksel yg bersebelahan
+3. psychovisual redundan = ada 3, mach band, quantization, irreversible operation (proses yg mengakibatkan hilangnya beberapa informasi)
+
+----------------------------------------------------
+Feature extraction
+
+- spatial operation = dilakukan pada pixel masukan lokal
+- proses dilakukan dengan mengguanakan matriks lalu buat ambil rata2 dari semua bobot nilai
+- image analysis = tujuannya adalah untuk mengekstrak fitur penting dari data gambar
+- proses image analysis = feature extraction, segmentation (threshold, edge detection), classification
+
+- feature extraction = proses menemukan fitur dari segmentasi gambar. biasanya ditampilkan pada operasi biner yg dibuat dari proses threshold
+- berbagai fitur umum yg terkandung :
+1. area, menghitung jumlah pixel disetiap label
+2. perimeter, pixel yg berbobot nol
+3. compactness, fitur lain yg dapat diperoleh dari pengukuran sederhana
+
+- simple pattern clasification = using KNN
