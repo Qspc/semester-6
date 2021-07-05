@@ -1,0 +1,132 @@
+SISDAS BAB I
+
+intelegent algorithm :
+1. artifical neural network
+2. evolutional computation (virus)
+3. swarm intellegence (semut)
+4. artificial immune system 
+5. fuzzy system (pertengahan antara 0 & 
+
+1) artificial neural network (ANN)
+diadopsi dari sistem otak kita
+- perceptron = unit terkecil ANN, bentuknya berbeda2. memuat fungsi aktivasi, bobot, dan nilai input
+- fungsi aktivasi NN = membatasi respon suatu sistem
+
+arsitektur jaringan ANN :
+1. feed forward network (supervised)
+2. feedback network
+
+FEED FORWARD NETWORK
+- terbagi menjadi 2 :
+1. single layer perseptron 
+2. multilayer perceptron
+- terdiri dua layer, hidden layer dan output layer
+- multilayer terdapat hidden layer sedangkan perceptron/single layer tidak ada hidden output
+
+1. SINGLE LAYER/PERCEPTRON
+- input -> activation function -> output
+- proses yang dilakukan menentukan W
+
+2. MULTILAYER PERCEPTRON
+- punya hidden layer
+- backpropagation -> supervised learning
+- N (jumlah neuron), M (hidden layer), L (output), w (bobot layer 1), v (bobot layer 2)
+- hidden layer sebanyak N
+- jumlah N (neuron) berdasarkan input output
+- jumlah N pada hidden layer sebanyak trial error
+
+- backpropagation = untuk mengupdate bobot
+
+
+fungsi aktivasi = membatasi outputnya
+pemilihan activation berdasarkan karakteristik data
+supervised = clasification/regresi
+unsupervosed = clustering/asosiasi
+reinforcement = mencari paling optimum 
+
+SUPERVISED (sudah punya label)
+bias = fasilitas kontanta
+./server
+
+ctrl b persen
+nc localhostm port
+
+Learning Vector Quantization (LVQ)
+LVQ = metode klasifikasi (masih neural network)
+
+jika dua vektor mendekati lapisan yg sama, maka akan masuk kelas yg sama
+
+-----------------------------------
+LVQ
+
+- arsitektur sama seperti SOM
+- berdasarkan jarak untuk menentukan pemenang
+- bedanya dengan SOM (ada input saja), kalo SOM unsupervised kalo LVQ Supervised (ada input + target)
+- pada LVQ pemenang dan tetangga di update tapi blum tentu didekatkan
+- kalo pemenang sesuai dengan kelasnya baru akan didekatkan. kalo tidak sesuai akan dijauhkan
+
+
+step 0 = inisiasi W
+step 1 = mulai komputasi
+step 2 = vektor input 1 masuk
+step 3 = 
+step 4 = cek kecocokan data
+step 5 = learning rate diturunkan, ulangi step 1 
+step 6 = proses berhenti
+-----------------------------------
+BAB 8
+
+genetic algorithm = 
+
+
+- tentukan batas bawah dan batas atas
+-----------------------------------
+fuzzy vs probabilitas
+
+peluang = mengukur kejadian dimasa depan tapi digunakan untuk zaman sekarang. tidak digunakan untuk masalah linguistik/ambiguiti
+fuzzy = ketidak akuratan sesuatu. mengukur kejadian saat ini
+
+- sesuatu yg bersifat absolute itu tidak fuzzy
+- contoh pemanfaatan fuzzy : vakum cleaner bisa mendeteksi benda yg kasar dan tidak ketika menyedot, motor/mobil matic
+
+
+
+
+
+FUZIFIKASI
+1. mamdani = input output harus himpunan fuzzy dan penentuan nilai defuzifikasi dengan center of grafitv
+2. tsukamoto = input output harus himpunan fuzzy dan nilai defuzifikasi dengan bobot rata2
+3. sugeno input berupa himp fuzzy, output berupa nilai linear. penentuan nilai defuzifikasi bisa dgn center of gravity
+
+fuzzy inference system
+defuzifikasi = merubah data fuzzy mennjadi crisp
+fuzzy bukan machine learning
+
+problem fuzzy :
+- identifikasi masalah/variabel
+- inference set (banyaknya variabel/himpunan yg saling berkaitan)
+
+
+1. Mamdani. 
+- jika variabel nya satu maka caranya rules di inference, ubah kek membership degree lalu langsung potong mennggunakan teknik clipping/scaling
+- jika input variabel ada dua. lakukan mapping terhadap dua variabel tersebut, lalu masing2 klip yg diperoleh ambil nilai yang minimal (jika fungsinya "and")
+
+2. sugeno, bisa digunakan jika ada fungsi yg menyatakan output
+
+3. tsukamoto, gabungan mamdani dan sugeno. terdapat grafik mencari lunguistik variabel seperti mamdani, tapi ada fungsi juga seperti sugeno
+
+
+
+
+
+- pso adalah = algoritma yeng berguna untuk optimasi suatu permasalahan guna menemukan nilai maksimum/minimum pada fungsi tersebut. program yang digunakan yaitu menggunakan swarm yg berjumlah banyak. inspirasi burung
+- behavior :
+1. separation = kecenderungan untuk menghindari kerumunan
+2. allignmeant = individu menyesuaikan sekelilingnya, kearah rata2
+3. cohesion = menuju posisi titik tengah tetangga terdekat
+- nilai fitness = nilai yg menyatakan baik/buruknya suatu sistem. menjadi paramater kondisi optimal pada sistem juga
+- nilai penalti = kondisi dimana nutrisi tidak terpenuhi/kurang dari nilai tertentu
+- swarm = banyaknya partikel (ransum = 6 kombinasi bahan makanan)
+
+- Kodingannya bikin sendiri tapi kalo algoritma nya ngikutin dari paper
+- eh kita ada modifikasi sebenernya dibagian dimensi partikel kalo dipaper generate awal 10 tiap partikel trus dipilih 6 teratas nah kalo implementasi kita langsung generate 6
