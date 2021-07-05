@@ -1,2 +1,10 @@
 # semester-6
-mau menuh-menuhin github
+
+MATA KULIAH :
+- Pengembangan Sistem Berorientasi Objek (PSBO)
+- Sistem Cerdas (Sisdas)
+- Komunikasi Data dan Jaringan Komputer (Komdat)
+- Pengolahan Citra Digital (PCD)
+- Analisis Algoritma (Analgor)
+- Data Mining (Daming)
+- Graf Algoritmik (graf algor)
