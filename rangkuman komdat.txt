@@ -1,0 +1,98 @@
+- arsitektur jaringan = rancangan yg menyatakan bagaimana jaringan dibangun dan dioperasikan
+- jaringan komunikasi = sekumpulan perangkat, mekanisme, prosedur, dan fasilitas yg menyediakan sebuah layanan
+- node jaringan = mesin/komputer yg menyediakan koneksi bagi user (circuit switching) dan merelay data user (komdat)
+- end system = jaringan memberikan pelayanan yaitu memindahkan informasi antar pengguna yg berlokasi di berbagai tempat
+
+- circuit switching = jalur komunikasi khusus yg dibangun selama durasi komunikasi, c: telepon
+- paket switching = data terkirim dalam paket kemudian melintas antar node. c: sms
+-------------------------------------
+- layer = pembagian fungsi kedalam grup yg dapat dikontrol oleh sebuah protokol
+- protokol = himpunan aturan yg memandu interaksi antar entitas komunikasi
+
+- 7 OSI layers :
+1. application layer = menyediakan layanan untuk program aplikasi pengguna. c: html, dns, smtp
+2. presentasion layer = layanan penyesuaian format data agar dapat dibaca. C: ascii, jpg
+3. session layer = mengontrol trasnfer data antar terminal
+4. transport layer = proses transfer data dari mesin awal ke mesin tujuan. gunain port number
+5. network layer = transfer packet melalui berbagai link jaringan. pake IP
+6. data link layer = transfer frame melalui koneksi langsung. kelompokan bit kedalam frame. c: hdlc
+7. physical layer = tranfer bit melalui link, c: ethernet
+
+layer presentasion = format data digital
+
+line coding = merubah data biner menjadi informasi digital
+
+error control = digunakan ketika sustem transmisi tak dapat memenuhi kebutuhan aplikasi
+
+polynomial codes = merepresentasikan nilai biner kedalam polinom
+
+
+MULTIPLEXING
+teknik yg memungkinkan transimisi beberapa sinyal melalui satu jaringan data
+pembagian multiplexing :
+
+contoh :
+ada 4 channel, setiap channel mengirimkan 100 byte/s dan akan di multiplex 1 byte perchannel
+ukuran frame = 4byte = 32 bit
+frame rate = 3200 bps
+
+CIRCUIT SWITCHES
+
+1G = analaog voice
+2G = GSM, cdma, bisa pengiriman data lewat gprs
+3G = mobile broadband, 
+4G =
+5G = cloud native
+
+-------------------------------------
+PEER TO PEER PROTOCOL
+
+peer process = 2 entitas yg saling berkomunikasi
+
+fungsi adaptasi :
+- kemampuan menyesuaikan ukuran pesan
+- timing
+- addressing
+- alamat fisik 
+- privacy
+-------------------------------------
+physical layer = 
+data link layer = transfer per frame
+
+LOCAL AREA NETWORK (LAN)
+- data link ada dua sub (LLC + LAC)
+- sifatnya area, lebih kecil
+- menerapkan broadcast, memerlukan access ke medium
+
+random access protocol :
+- sifatnya lebih free
+- mengirimkan frame lalu mendeteksi ada collison atau tidak
+- ALOHA, diterapkan pada jaringan wireless
+- CSMA, jika terdeteksi ada collison maka akan stop selama backoff
+
+waktu propagasi :
+- tergantung dari jarak
+- v diambil dari kecepatan cahaya
+
+waktu delay transmisi :
+- tidak ada jarak
+- total waktu transmisi : delay waktu transimi + 2*delay waktu propagasi
+
+delay bandwidth produk :
+- a = waktu propagasi/waktu transimisi
+- throughput = actual rate, dihitung menggunakan 
+
+arsiterktur dasar dalam wireless :
+- infrastucture, menggunakan akses point
+- Ad hoc, 
+- gunakan sinyal Rts untuk mengirim sinyal Cts ke semua komputer
+
+perangkat yg bisa digunakan pada LAN :
+- hub, di layer 1
+- bridge/switch, di layer 2
+- router, di layer 3
+-------------------------------------
+BAB VIII
+paket switching
+
+- paket switching = pengalihan paket akan dikirim kemana aja
