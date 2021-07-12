@@ -8,3 +8,5 @@ MATA KULIAH :
 - Analisis Algoritma (Analgor)
 - Data Mining (Daming)
 - Graf Algoritmik (graf algor)
+
+Pembahasan lebih lanjut silahkan cek di branch masing2
