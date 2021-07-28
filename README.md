@@ -7,6 +7,6 @@ MATA KULIAH :
 - Pengolahan Citra Digital (PCD)
 - Analisis Algoritma (Analgor)
 - Data Mining (Daming)
-- Graf Algoritmik (graf algor)
+- Graf Algoritmik (graf algor) --> (SC)
 
 Pembahasan lebih lanjut silahkan cek di branch masing2
