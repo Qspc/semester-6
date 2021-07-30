@@ -1,6 +1,6 @@
 # semester-6
 
-MATA KULIAH :
+MATA KULIAH semester 6 :
 - Pengembangan Sistem Berorientasi Objek (PSBO)
 - Sistem Cerdas (Sisdas)
 - Komunikasi Data dan Jaringan Komputer (Komdat)
@@ -9,4 +9,4 @@ MATA KULIAH :
 - Data Mining (Daming)
 - Graf Algoritmik (graf algor) --> (SC, tidak ada branch karena tidak memuat kodingan pada pembelajarannya)
 
-Pembahasan lebih lanjut silahkan cek di branch masing2
+Pembahasan lebih lanjut silahkan cek di branch 
