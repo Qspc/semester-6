@@ -1,6 +1,6 @@
 # semester-6
 
-MATA KULIAH semester 6 :
+MATA KULIAH :
 - Pengembangan Sistem Berorientasi Objek (PSBO)
 - Sistem Cerdas (Sisdas)
 - Komunikasi Data dan Jaringan Komputer (Komdat)
